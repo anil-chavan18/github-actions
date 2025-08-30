@@ -1,0 +1,10 @@
+title = "custom Gitleaks rules"
+
+[extend]
+useDefault = true
+
+[[rules]]
+description = "Generic password in .env"
+id = "generic-env-password"
+regex = '''(?i)(password|pwd|secret)[\s"']*=[\s"']*[^"'#\s]+'''
+tags = ["key", "password", "env"]
